@@ -28,12 +28,13 @@
     "jshint-stylish": "^0.4.0",
     "run-sequence": "^0.3.6",
     "sinon": "^1.10.3",
-    "sinon-chai": "^2.5.0"
+    "sinon-chai": "^2.5.0",
+    "hoist-context": "git://github.com/hoist/hoist-context",
+    "hoist-errors": "git://github.com/hoist/hoist-errors"
+
   },
   "dependencies": {
     "bluebird": "^2.3.11",
-    "hoist-context": "git://github.com/hoist/hoist-context",
     "hoist-errors": "git://github.com/hoist/hoist-errors",
-    "hoist-model": "git://github.com/hoist/hoist-model"
   }
 }
