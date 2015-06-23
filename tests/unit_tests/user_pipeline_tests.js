@@ -2,10 +2,10 @@
 require('../bootstrap');
 var pipeline = require('../../lib')();
 var sinon = require('sinon');
-var AppUser = require('hoist-model').AppUser;
-var HoistContext = require('hoist-context');
-var errors = require('hoist-errors');
-var Application = require('hoist-model').Application;
+var AppUser = require('@hoist/model').AppUser;
+var HoistContext = require('@hoist/context');
+var errors = require('@hoist/errors');
+var Application = require('@hoist/model').Application;
 var BBPromise = require('bluebird');
 var expect = require('chai').expect;
 
@@ -34,13 +34,11 @@ describe('UserPipeline', function () {
     describe('with valid username and password', function () {
       var _result;
       before(function (done) {
-        HoistContext.namespace.run(function () {
-          HoistContext.get().then(function (context) {
-            context.application = application;
-            pipeline.login('User@hoi.io', 'Password123').then(function (result) {
-              _result = result;
-              done();
-            });
+        HoistContext.get().then(function (context) {
+          context.application = application;
+          pipeline.login('User@hoi.io', 'Password123').then(function (result) {
+            _result = result;
+            done();
           });
         });
       });
@@ -59,15 +57,15 @@ describe('UserPipeline', function () {
       var _error;
       before(function (done) {
         AppUser.findOneAsync.returns(BBPromise.resolve(null));
-        HoistContext.namespace.run(function () {
-          HoistContext.get().then(function (context) {
-            context.application = application;
-            pipeline.login('noone@hoi.io', 'Password123', function (error) {
-              _error = error;
-              done();
-            });
+
+        HoistContext.get().then(function (context) {
+          context.application = application;
+          pipeline.login('noone@hoi.io', 'Password123', function (error) {
+            _error = error;
+            done();
           });
         });
+
       });
       after(function () {
         AppUser.findOneAsync.returns(appUser);
@@ -80,14 +78,14 @@ describe('UserPipeline', function () {
     describe('with invalid password', function () {
       var _error;
       before(function (done) {
-        HoistContext.namespace.run(function () {
-          HoistContext.get().then(function (context) {
-            context.application = application;
-            pipeline.login('User@hoi.io', 'password!@3', function (error) {
-              _error = error;
-              done();
-            });
+
+        HoistContext.get().then(function (context) {
+          context.application = application;
+          pipeline.login('User@hoi.io', 'password!@3', function (error) {
+            _error = error;
+            done();
           });
+
         });
       });
       it('throws incorrect credentials exception', function () {
