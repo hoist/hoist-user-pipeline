@@ -1,5 +1,5 @@
 {
-  "name": "hoist-user-pipeline",
+  "name": "@hoist/user-pipeline",
   "version": "1.0.0",
   "description": "Hoist pipeline for Hoist.user",
   "main": "./lib/index.js",
@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/hoist/hoist-user-pipeline",
   "devDependencies": {
+    "@hoist/context": "^1.0.0",
+    "@hoist/model": "^1.0.2",
     "chai": "^1.9.1",
     "chai-as-promised": "^4.1.1",
     "gulp": "^3.8.8",
@@ -28,13 +30,10 @@
     "jshint-stylish": "^0.4.0",
     "run-sequence": "^0.3.6",
     "sinon": "^1.10.3",
-    "sinon-chai": "^2.5.0",
-    "hoist-context": "git://github.com/hoist/hoist-context",
-    "hoist-errors": "git://github.com/hoist/hoist-errors"
-
+    "sinon-chai": "^2.5.0"
   },
   "dependencies": {
-    "bluebird": "^2.3.11",
-    "hoist-errors": "git://github.com/hoist/hoist-errors"
+    "@hoist/errors": "^1.0.1",
+    "bluebird": "^2.3.11"
   }
 }
