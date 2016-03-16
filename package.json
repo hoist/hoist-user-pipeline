@@ -17,23 +17,25 @@
   },
   "homepage": "https://github.com/hoist/hoist-user-pipeline",
   "devDependencies": {
-    "@hoist/context": "^1.0.0",
-    "@hoist/model": "^1.0.2",
-    "chai": "^1.9.1",
-    "chai-as-promised": "^4.1.1",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.2.0",
     "gulp": "^3.8.8",
-    "gulp-istanbul": "^0.3.0",
+    "gulp-istanbul": "^0.10.3",
     "gulp-istanbul-enforcer": "^1.0.3",
-    "gulp-jshint": "^1.8.4",
-    "gulp-mocha": "^1.1.0",
-    "jshint-growl-reporter": "^0.1.1",
-    "jshint-stylish": "^0.4.0",
-    "run-sequence": "^0.3.6",
+    "gulp-jshint": "^2.0.0",
+    "gulp-mocha": "^2.2.0",
+    "jshint": "^2.9.1",
+    "jshint-growl-reporter": "^1.0.0",
+    "jshint-stylish": "^2.1.0",
+    "run-sequence": "^1.1.5",
     "sinon": "^1.10.3",
     "sinon-chai": "^2.5.0"
   },
   "dependencies": {
-    "@hoist/errors": "^1.0.1",
-    "bluebird": "^2.3.11"
+    "@hoist/context": "^1.0.0",
+    "@hoist/errors": "^2.0.1",
+    "@hoist/model": "^2.0.0",
+    "bluebird": "^3.3.4",
+    "moment": "^2.12.0"
   }
 }
