@@ -1,6 +1,6 @@
 {
   "name": "@hoist/user-pipeline",
-  "version": "1.0.0",
+  "version": "2.0.0-pre.1",
   "description": "Hoist pipeline for Hoist.user",
   "main": "./lib/index.js",
   "scripts": {
